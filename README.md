@@ -30,5 +30,24 @@ sudo mv vlt /usr/bin/vlt
 ```
 
 # Sync
+To sync your jcr with file system, you need to have your AEM instance running.
+
+Open your terminal and navigate to a whichever directory that is convenient to you (e.g. ~/Desktop)
+```sh
+cd ~/Desktop
+```
+
+Create a folder for synchonizing with AEM:
+```sh
+mkdir -p aem6
+cd aem6
+```
+
+Once you are inside the folder you just created, you can start the sync process.
+First of all, you need to provide your credentials of your AEM instance.  If you are using the default username and password, just run the follow line.  Otherwise, replace the <username> and <password> with your own.
+```sh
+vlt --credentials admin:admin # the format goes like: vlt --credentials <username>:<password>
+```
+
 
 
