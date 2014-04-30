@@ -3,6 +3,11 @@ aem-vlt
 
 # About
 
+The official instruction from Adobe is in here:
+http://wem.help.adobe.com/enterprise/en_US/10-0/core/how_to/how_to_use_the_vlttool.html
+Please refer to the official document if needed.
+
+
 # Setup
 Navigate to the directory of your AEM instance:
 ```sh
