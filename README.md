@@ -54,5 +54,27 @@ First of all, you need to provide your credentials of your AEM instance.  If you
 vlt --credentials admin:admin # the format goes like: vlt --credentials <username>:<password>
 ```
 
+Once your credential is properly set, you can checkout (co) the files from your AEM instance.  The process may take a while depends on the size and amount of contents on your instance.
+```sh
+vlt co --force http://localhost:4502/crx # the format goes like: vlt co --force <uri>:<port>/crx
+```
 
+Once the checkout is done, you can now copy the files that you want to deploy into your AEM instance to the file structure, placing them under <file_path> such as /jcr_root/etc.
 
+Then navigate to the jcr_content folder and check the status of the files being copied into the file structure.
+```sh
+cd jcr_content
+vlt status # should see all newly added files
+```
+
+Stage the files that you want to depoly to the AEM instance.
+```sh
+vlt add <file_name>
+```
+
+Then commit them.
+```sh
+vlt commit -v
+```
+
+The files should now be deployed to your AEM instance, and you should be able to find them on CRX-DE under the <file_path> that you specified earlier.
