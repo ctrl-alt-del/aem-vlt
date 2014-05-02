@@ -49,14 +49,10 @@ cd aem6
 ```
 
 Once you are inside the folder you just created, you can start the sync process.
-First of all, you need to provide your credentials of your AEM instance.  If you are using the default username and password, just run the follow line.  Otherwise, replace the <username> and <password> with your own.
+First of all, you need to provide your credentials of your AEM instance.  If you are using the default username and password, just run the follow line.  Otherwise, replace the <username> and <password> with your own.  You can checkout (co) the files from your AEM instance.  The process may take a while depends on the size and amount of contents on your instance.
 ```sh
-vlt --credentials admin:admin # the format goes like: vlt --credentials <username>:<password>
-```
-
-Once your credential is properly set, you can checkout (co) the files from your AEM instance.  The process may take a while depends on the size and amount of contents on your instance.
-```sh
-vlt co --force http://localhost:4502/crx # the format goes like: vlt co --force <uri>:<port>/crx
+vlt --credentials admin:admin co --force http://localhost:4502/crx 
+# the format goes like: vlt --credentials <username>:<password> co --force <uri>:<port>/crx
 ```
 
 Once the checkout is done, you can now copy the files that you want to deploy into your AEM instance to the file structure, placing them under <file_path> such as /jcr_root/etc.
