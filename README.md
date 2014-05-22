@@ -34,6 +34,44 @@ Move the executable vlt file to /usr/bin, you may need your password for the wri
 sudo mv vlt /usr/bin/vlt
 ```
 
+Alternatively, you can add the path to your .bash_profile if you don't want to move it to your /usr/bin folder, and then source the .bash_profile whenever you need to use vlt.
+
+To add the path, open your .bash_profile by running:
+```sh
+sudo vim ~/.bash_profile
+```
+
+If there is an error saying "vim" is undefined or cannot be found, try running:
+```sh
+sudo vi ~/.bash_profile
+```
+
+Once you opened your .bash_profile on terminal, press "i" key to enter "insert mode".
+Move to the last line of the file, start a new line, and then type:
+```sh
+export PATH=<AEM_instance_directory>/<Vault_cli_folder>/bin:$PATH
+```
+
+Once you are done, press "esc" key to exit the "insert mode", and then save your changes and exit the file by running:
+```sh
+:x
+```
+
+Upon you hit the "enter/return" key, you should be back to normal terminal.
+
+Verify the path of your vlt is added by running:
+```sh
+echo $PATH
+```
+
+To use vlt, you need to source the .bash_profile by running:
+```sh
+source ~/.bash_profile
+```
+
+Now, you should be able to use vlt.
+
+
 # Sync
 To sync your jcr with file system, you need to have your AEM instance running.
 
