@@ -14,7 +14,7 @@ Navigate to the directory of your AEM instance:
 cd <AEM_instance_directory>
 ```
 
-Assuming you had initialized you AEM instance, navigate to the folder containing compressed vault tool:
+Assuming you had initialized you AEM instance (had ran your AEM instance before), navigate to the folder containing compressed vault tool:
 ```sh
 cd /crx-quickstart/opt/filevault
 ```
